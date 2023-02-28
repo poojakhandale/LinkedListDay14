@@ -99,6 +99,25 @@ namespace LinkedList
                 head = head.next;
 
             }
+            public void Deletetail()
+            {
+                if (head == null)
+                {
+                    System.Console.WriteLine("list is empty");
+                }
+                if (head.next == null)
+                {
+                    head = null;
+                }
+                Node Current = head;
+                while (Current.next.next != null)
+                {
+                    Current = Current.next;
+                }
+                Current.next = null;
+            }
         }
     }
 }
+    
+

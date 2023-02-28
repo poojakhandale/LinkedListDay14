@@ -89,6 +89,16 @@ namespace LinkedList
 
                 }
             }
+            public void DeleteFirst()
+            {
+                if (head == null)
+                {
+                    Console.WriteLine("list is empty");
+                    return;
+                }
+                head = head.next;
+
+            }
         }
     }
 }

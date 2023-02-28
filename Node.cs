@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LinkedList
+namespace DataStructure
 {
     public class Node
     {
@@ -20,6 +15,7 @@ namespace LinkedList
         {
 
             public Node head;
+
             private int Count;
 
             public void Add(int data)
@@ -84,7 +80,7 @@ namespace LinkedList
                 while (temp != null)
                 {
 
-                    Console.WriteLine(temp.data);
+                    Console.Write(temp.data + "->");
                     temp = temp.next;
 
                 }
@@ -99,6 +95,7 @@ namespace LinkedList
                 head = head.next;
 
             }
+
             public void Deletetail()
             {
                 if (head == null)
@@ -116,7 +113,8 @@ namespace LinkedList
                 }
                 Current.next = null;
             }
-            public void Search(int num)
+
+            public int Search(int num)
             {
                 Node temp = this.head;
                 int position = 1;
@@ -126,18 +124,16 @@ namespace LinkedList
                     if (temp.data == num)
                     {
                         Console.WriteLine("The given number {0} found in {1}", num, position);
-                        return;
+                        return position;
                     }
                     position++;
                     temp = temp.next;
                 }
-                Console.WriteLine("Number is not found on the List");
+                return 0;
 
 
             }
         }
     }
-    }
-
-    
+}
 

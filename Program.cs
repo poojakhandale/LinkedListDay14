@@ -1,17 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LinkedList;
+using static LinkedList.Node;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        Node head = new Node(56);
-        Node second = new Node(70);
-        Node tail = new Node(30);
-        head.next = second;
-        second.next = tail;
-
+    
+            MyLinkList linkList = new MyLinkList();
+            linkList.Add(56);
+            linkList.Add(70);
+            linkList.insert(2, 30);
+            linkList.display();
+        }
     }
-}
 
 
